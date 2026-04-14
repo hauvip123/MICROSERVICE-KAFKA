@@ -23,7 +23,7 @@ app.post("/payment-service", async (req, res) => {
     const { cart } = req.body;
     const userId = "123";
     await producer.send({
-        topic: "payment-sucessful",
+        topic: "payment-successful",
         messages: [
             { value: JSON.stringify({ cart, userId }) },
         ],
